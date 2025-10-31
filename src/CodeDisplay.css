@@ -1,0 +1,24 @@
+.code-page {
+    background-color: var(--page-bg-color);
+    color: #d4d4d4;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.code-container {
+    background-color: var(--page-bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.js {
+    color: var(--accent-color);
+}
+

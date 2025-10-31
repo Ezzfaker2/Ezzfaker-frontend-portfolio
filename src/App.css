@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "CodeDisplay.css";
 
 /* reset */
 
@@ -8,7 +9,7 @@
     --text-color: var(--white);
     --accent-color: var(--purple);
 
-    --black: #171718;
+    --black: #181717;
     --white: #ffffff;
     --purple: #5C62EC;
     --border-black: #26292D;
@@ -18,19 +19,29 @@
 
 
 
-
+.light {
+    --page-bg-color: var(--white);
+    --text-color: var(--black);
+}
 
 
 
 .dark {
     --page-bg-color: #252526;
     --text-color: var(--white);
+    .main-link__img {
+        box-shadow: 10px 5px 5px #171718;
+        border-radius: 10px;
+    }
+
 }
 
 
 
 
 /*Dark mode*/
+
+
 
 
 
@@ -42,6 +53,8 @@
 
 }
 html, body {
+    font-family: Roboto Condensed, EBGaramond, sans-serif;
+    letter-spacing: -0.5px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -52,7 +65,11 @@ html, body {
 .content-container {
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 100vh;
+}
+.serif-normal {
+    font-family: EBGaramond-Italic, serif;
+    font-weight: bold;
 }
 
 
@@ -72,14 +89,20 @@ html, body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
-
+    color: var(--white);
 }
-
+.nav-row > *:first-child {
+    margin-right: auto;
+}
 .logo {
     display: block;
-
+    font-size: 24px;
     color: var(--text-color);
+
+}
+.logo strong span {
+    font-size: 22px;
+
 }
 
 .nav-list {
@@ -90,16 +113,22 @@ html, body {
     padding: 20px 0;
     display: flex;
     column-gap: 40px;
+
 }
 
-.nav-list__item {
 
+.nav-list__item {
+    font-size: 16px;
+    font-weight: bold;
 
 
 }
 
 .nav-list__link {
     color: var(--text-color);
+}
+.nav-list__link span {
+    font-size: 20px;
 }
 
 .nav-list__link--active {
@@ -136,25 +165,40 @@ html, body {
 
 .header-container {
     padding: 33px 0;
-
-
+}
+.header-info__span {
+    color: #494949;
 }
 
+
+
 .header-container__content-wrapper {
+color: var(--white);
     letter-spacing: -0.5px;
     align-items: center;
     justify-content: center;
     text-align: center;
+
 }
 
 .header-container__content-wrapper > h1 {
     color: var(--text-color);
     font-weight: 700;
     font-size: 40px;
+    letter-spacing: -0.5px;
 }
 
 .header-text {
-    margin: 20px
+    margin: 20px;
+    color: white
+
+}
+.header-text strong {
+    color: var(--white);
+    font-size: 60px;
+}
+.header-text em {
+    color: white
 }
 
 .header-text span {
@@ -164,21 +208,28 @@ html, body {
 .header-other {
     font-size: 18px;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--white);
     padding-bottom: 20px;
     text-align: center;
 
 }
+.span__other__q {
+    color: white !important
+}
 
 .header-cvLink {
     color: var(--text-color);
+    letter-spacing: 0.15px;
+    font-size: 16px;
 }
 
 .header-link {
+    margin-top: 20px;
     padding: 12px 28px;
     background-color: var(--accent-color);
     display: inline-block;
     border-radius: 5px;
+
 }
 
 /*Header*/
@@ -201,6 +252,7 @@ html, body {
 
 .project {
     row-gap: 30px;
+    justify-content: center;
     column-gap: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -224,6 +276,7 @@ html, body {
     letter-spacing: -0.5px;
     font-weight: bold;
     font-size: 24px;
+    color: var(--accent-color);
 }
 
 /*main*/
@@ -266,6 +319,8 @@ html, body {
 .Skills__container {
     align-items: center;
     justify-items: center;
+    color: var(--text-color);
+
 }
 
 .Skills__container h1 {
@@ -294,6 +349,7 @@ html, body {
 .contact-wrapper {
     align-items: center;
     justify-items: center;
+    color: var(--text-color);
 }
 
 .contact-wrapper h1{
@@ -366,15 +422,76 @@ html, body {
 
     z-index: 9;
 
-    width: 16px; /* Добавьте фиксированные размеры */
+    width: 16px;
     height: 16px;
 }
-
-
 
 .theme-container {
     position: relative;
     display: block;
     order: 9;
 }
+
+/*theme tab*/
+
+
+
+@media (max-width: 620px) {
+    .nav-row {
+        display: flex;
+        padding:10px 0;
+        justify-content: center;
+        column-gap: 70px;
+    }
+    .nav-row > *:first-child {
+        margin-right: unset;
+    }
+    .header {
+        min-height: unset;
+    }
+    .header-text strong{
+        font-size: 50px;
+    }
+    .span__other__q{
+        font-size: 30px;
+    }
+    .main-title {
+        font-size: 50px;
+    }
+    .main-link__text {
+        font-size: 20px;
+        text-align: center;
+    }
+    .Skills__container {
+        padding: 0 20px;
+    }
+    .footer {
+        margin-top: 20px;
+    }
+    .contact-wrapper h1 {
+        margin-top: 30px;
+    }
+    .contact-wrapper h2{
+        text-align: center;
+    }
+    .footer-links__element {
+        height: 28px;
+        width: 28px;
+        align-content: center;
+        justify-content: center;
+    }
+    .footer-links {
+        column-gap: 25px;
+    }
+
+}
+
+
+.main-link__text {
+    text-align: center;
+}
+
+
+
+
 
