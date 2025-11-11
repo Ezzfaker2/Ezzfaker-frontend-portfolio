@@ -1,5 +1,5 @@
-@import "reset.css";
-@import "CodeDisplay.css";
+
+@import "../../CodeDisplay.css";
 
 /* reset */
 
@@ -62,11 +62,7 @@ html, body {
     color: var(--text-color);
 
 }
-.content-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+
 .serif-normal {
     font-family: EBGaramond-Italic, serif;
     font-weight: bold;
@@ -78,18 +74,23 @@ html, body {
 .navigation {
     background-color: var(--background-color);
     color: var(--text-color);
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 1px solid #26292D;
+
 
 }
 
 .nav-row {
+
     display: flex;
     column-gap: 30px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     color: var(--white);
+
 }
 .nav-row > *:first-child {
     margin-right: auto;
@@ -233,6 +234,10 @@ color: var(--white);
 }
 
 /*Header*/
+.main-link__text {
+    text-align: center;
+}
+
 
 .main {
 
@@ -284,11 +289,14 @@ color: var(--white);
 
 
 .footer {
-    margin-top: auto;
+    position: relative;
+    bottom: -100px;
+
     background-color: var(--background-color);
     color: var(--text-color);
     height: 200px;
-    flex-shrink: 0;
+    width: 100%;
+
 
 
 }
@@ -309,6 +317,7 @@ color: var(--white);
     justify-content: center;
     margin-top: 27px;
     margin-bottom: 50px;
+    color: white;
 }
 
 /*footer*/
@@ -350,6 +359,7 @@ color: var(--white);
     align-items: center;
     justify-items: center;
     color: var(--text-color);
+    margin-top: 125px;
 }
 
 .contact-wrapper h1{
@@ -487,9 +497,6 @@ color: var(--white);
 }
 
 
-.main-link__text {
-    text-align: center;
-}
 
 
 
