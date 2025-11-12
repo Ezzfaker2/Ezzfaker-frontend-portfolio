@@ -1,4 +1,4 @@
-import './App.css'
+import './app.css'
 import {Route, Routes} from "react-router-dom";
 import {MainPage, Projects, Skills, Contacts} from "../index.ts";
 import {useLocalStorage} from "../../hooks/useLocalStorage.ts";

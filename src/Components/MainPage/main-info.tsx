@@ -88,7 +88,7 @@ const MainInfo = () => {
           </li>
         </ul>
       </div>
-      <div>qwe</div>
+
     </main>
   );
 };
