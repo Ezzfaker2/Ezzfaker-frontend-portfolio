@@ -1,5 +1,5 @@
 import './app.css'
-import {Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import {MainPage, Projects, Skills, Contacts} from "../index.ts";
 import {useLocalStorage} from "../../hooks/useLocalStorage.ts";
 import {Context} from '../../contexts/Context.ts';
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Context.Provider value={{themeHandler, theme}}>
+      <HashRouter><Context.Provider value={{themeHandler, theme}}>
         <Routes>
           <Route
             path="/"
@@ -40,7 +40,8 @@ function App() {
           ></Route>
         </Routes>
       </Context.Provider>
-<div>Roma</div>
+        <div>Roma</div>
+      </HashRouter>
     </>
 
   )
